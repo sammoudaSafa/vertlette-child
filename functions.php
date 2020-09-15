@@ -7,6 +7,20 @@
  * @package vertlette-child
  */
 
+// ma partie
+// template tages
+add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' );
+
+function enqueue_parent_styles() {
+   wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
+}
+
+
+
+
+
+
+
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );
